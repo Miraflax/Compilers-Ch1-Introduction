@@ -1,0 +1,16 @@
+Stm -> Stm; Stm
+    | id := Exp
+    | print ( ExpList )
+
+Exp -> id
+    | num
+    | Exp Binop Exp
+    | ( Stm , Exp )
+
+ExpList -> Exp , Explist
+    | -> Exp
+
+Binop -> + | - | * | / 
+
+terminals start with lowercase letters
+
